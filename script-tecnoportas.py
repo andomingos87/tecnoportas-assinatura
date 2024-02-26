@@ -3,14 +3,14 @@ import pandas as pd
 from collections import defaultdict
 
 # Certifique-se de que o CSV e o modelo HTML estão em UTF-8
-dados = pd.read_csv('colaboradores.csv', encoding='utf-8', sep=';')
+dados = pd.read_csv('colaboradores_tecnoportas.csv', encoding='utf-8', sep=';')
 
 # Ler o modelo de assinatura com UTF-8
-with open('modelo-grupotecno.html', 'r', encoding='utf-8') as file:
+with open('modelo-tecnoportas.html', 'r', encoding='utf-8') as file:
     modelo = file.read()
 
 # Pasta de destino para as assinaturas
-pasta_destino = 'assinaturas/grupotecno/'
+pasta_destino = 'assinaturas/tecnoportas/'
 os.makedirs(pasta_destino, exist_ok=True)  # Cria a pasta se não existir
 
 # Para controlar os nomes duplicados
